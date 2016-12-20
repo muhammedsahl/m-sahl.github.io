@@ -1,0 +1,154 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, 
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+----------------------------
+Main Styles
+----------------------------
+*/
+html * {
+	-webkit-font-smoothing: antialiased;
+  	-moz-font-smoothing: grayscale;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+  font-size: 100%;
+  font-family: "Ubuntu", sans-serif;
+  /*background-color: #2e2d32;*/
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/*
+----------------------------
+Reusable Styles
+----------------------------
+*/
+.container {
+	width: 90%;
+	max-width: 768px;
+	margin: 0 auto;
+}
+
+.container::after {
+	/* Clearfix */
+	content: '';
+	display: table;
+	clear: both;
+}
+
+/*
+header
+
+*/
+
+#main-content {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+  	/*background-color: #3a393f;*/
+	box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+	z-index: 1;
+	 -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+#intro {
+		position: relative;
+	  height: 100%;
+	  background: url("https://unsplash.it/7117/4090?image=1068") no-repeat center center;
+	  background-size: cover;
+}
+
+#intro h1 {
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  font-size: 25px;
+  font-size: 5.125rem;
+  font-weight: bold;
+  color: white;
+}
+@media only screen and (min-width: 768px) {
+  #intro h1 {
+    font-size: 26px;
+    font-size: 4.625rem;
+  }
+}
